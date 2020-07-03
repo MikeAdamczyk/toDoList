@@ -1,0 +1,16 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px auto;
+    line-height: 1.8;
+    color: rgb(49, 49, 49);
+}

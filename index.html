@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
-    <link href="js/script.js" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/addTask.css" rel="stylesheet">
+    <link href="css/displayTasks.css" rel="stylesheet">
+
+    <script defer src="js/script.js"></script>
+
     <title>ToDo List</title>
+
+
 </head>
+
 <body>
-    
+    <div class="container">
+
+        <header>
+            <h1>Lista zadań</h1>
+        </header>
+
+        <main>
+
+            <section class="addTask">
+
+                <h2 class="addTask__header">Dodaj nowe zadanie</h2>
+
+                <form class="addTask__form">
+                    <input class="addTask__input" type="text" placeholder="Co jest do zrobienia?">
+                    <button class="addTask__button">Dodaj zadanie!</button>
+                </form>
+
+            </section>
+
+
+            <section class="displayTasks">
+
+                <h2 class="displayTasks__header">Lista zadań</h2>
+
+                <ul class="displayTasks__list">
+
+        
+                </ul>
+               
+
+            </section>
+
+
+        </main>
+
+
+
+    </div>
+
 </body>
+
 </html>

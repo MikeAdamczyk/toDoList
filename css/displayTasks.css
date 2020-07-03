@@ -1,0 +1,10 @@
+.displayTasks__header {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 3px;
+}
+
+.displayTasks__list {
+    background-color: white;
+    padding: 20px;
+}

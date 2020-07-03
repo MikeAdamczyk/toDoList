@@ -1,0 +1,28 @@
+.addTask__header {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 3px;
+}
+
+.addTask__form {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.addTask__button {
+    padding: 10px;
+    background-color: teal;
+    color: white;
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.addTask__input {
+    padding: 10px;
+    flex-basis: 70%;
+    flex-grow: 1;
+    margin: 10px;
+}
