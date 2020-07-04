@@ -8,3 +8,49 @@
     background-color: white;
     padding: 20px;
 }
+
+.displayTasks__list {
+    background-color: white;
+    padding: 5px;
+}
+
+.displayTasks__listItem {
+    list-style: none;
+    margin-left: unset;
+    padding: 10px;
+    border-bottom: 2px solid #f2f2f2;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.displayTasks__content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+
+}
+
+.displayTasks__doneButton {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    background-color: green;
+}
+
+.displayTasks__removeButton {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    background-color: red;
+}

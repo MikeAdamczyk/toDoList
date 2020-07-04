@@ -1,14 +1,5 @@
 {
-
-    const tasks = [{
-            content: "run",
-            done: false,
-        },
-        {
-            content: "cut meat",
-            done: true,
-        },
-    ];
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -41,11 +32,12 @@
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
         toggleDoneButtons.forEach((doneButton, index) => {
+
             doneButton.addEventListener("click", () => {
                 toggleTaskDone(index);
             });
         });
-    }
+    };
 
     const render = () => {
 
@@ -53,17 +45,25 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li ${task.done ? "style=\"text-decoration: line-through; color: #ccc\"" : ""}
+            <li class="displayTasks__listItem" ${task.done ? "style=\"text-decoration: line-through; color: #ccc\"" : ""}
             >
-            <button class="js-done">Zrobione</button> ${task.content} <button class="js-remove">Usuń!</button>
+
+            <div><button class="displayTasks__doneButton js-done">
+            ${task.done ? "✓" : ""}
+            </button></div>
+                        
+            <div class="displayTasks__content">${task.content}</div>
+            
+            <div><button class="displayTasks__removeButton js-remove">🗑</button></div>
+            
             </li>`;
         };
 
         document.querySelector(".js-list").innerHTML = htmlString;
 
         bindEvents();
-    };
 
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
