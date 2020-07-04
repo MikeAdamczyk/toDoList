@@ -6,7 +6,7 @@
         },
         {
             content: "cut meat",
-            done: false,
+            done: true,
         },
     ];
 
@@ -23,15 +23,12 @@
         render();
     };
 
-    const render = () => {
+    const toggleTaskDone = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+        render();
+    };
 
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `<li> ${task.content} <button class="js-remove">Usuń!</button></li>`;
-        };
-
-        document.querySelector(".js-list").innerHTML = htmlString;
+    const bindEvents = () => {
 
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -40,6 +37,31 @@
                 removeTask(index);
             });
         });
+
+        const toggleDoneButtons = document.querySelectorAll(".js-done");
+
+        toggleDoneButtons.forEach((doneButton, index) => {
+            doneButton.addEventListener("click", () => {
+                toggleTaskDone(index);
+            });
+        });
+    }
+
+    const render = () => {
+
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+            <li ${task.done ? "style=\"text-decoration: line-through; color: #ccc\"" : ""}
+            >
+            <button class="js-done">Zrobione</button> ${task.content} <button class="js-remove">Usuń!</button>
+            </li>`;
+        };
+
+        document.querySelector(".js-list").innerHTML = htmlString;
+
+        bindEvents();
     };
 
 
