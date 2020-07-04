@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,6 @@
 
     <link href="css/global.css" rel="stylesheet">
     <link href="css/container.css" rel="stylesheet">
-    <link href="css/header.css" rel="stylesheet">
     <link href="css/addTask.css" rel="stylesheet">
     <link href="css/displayTasks.css" rel="stylesheet">
 
@@ -38,8 +37,8 @@
 
                 <h2 class="addTask__header">Dodaj nowe zadanie</h2>
 
-                <form class="addTask__form">
-                    <input class="addTask__input" type="text" placeholder="Co jest do zrobienia?">
+                <form class="addTask__form js-form">
+                    <input class="addTask__input js-input" type="text" placeholder="Co jest do zrobienia?">
                     <button class="addTask__button">Dodaj zadanie!</button>
                 </form>
 
@@ -50,11 +49,14 @@
 
                 <h2 class="displayTasks__header">Lista zadań</h2>
 
-                <ul class="displayTasks__list">
+                <div class="displayTasks__listBox">
 
-        
-                </ul>
-               
+                    <ul class="js-list">
+
+                    </ul>
+
+                </div>
+
 
             </section>
 
