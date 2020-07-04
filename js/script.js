@@ -1,29 +1,14 @@
 {
 
-    const tasks = [
-
-        {
+    const tasks = [{
             content: "run",
             done: false,
         },
-
         {
             content: "cut meat",
             done: false,
         },
     ];
-
-
-    const render = () => {
-
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `<li> ${task.content} </li>`;
-        };
-
-        document.querySelector(".js-list").innerHTML = htmlString;
-    };
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -31,7 +16,32 @@
         })
 
         render();
-    }
+    };
+
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
+    };
+
+    const render = () => {
+
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `<li> ${task.content} <button class="js-remove">Usuń!</button></li>`;
+        };
+
+        document.querySelector(".js-list").innerHTML = htmlString;
+
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                removeTask(index);
+            });
+        });
+    };
+
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -43,7 +53,7 @@
         }
 
         addNewTask(newTaskContent);
-    }
+    };
 
     const init = () => {
 
@@ -55,5 +65,4 @@
     };
 
     init();
-
 }
