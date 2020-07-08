@@ -54,7 +54,7 @@
                         
             <div class="displayTasks__content">${task.content}</div>
             
-            <div><button class="displayTasks__removeButton js-remove">🗑</button></div>
+            <div><button class="displayTasks__removeButton js-remove">X</button></div>
             
             </li>`;
         };

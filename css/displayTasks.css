@@ -12,45 +12,49 @@
 .displayTasks__list {
     background-color: white;
     padding: 5px;
+    display: grid;
 }
 
 .displayTasks__listItem {
-    list-style: none;
-    margin-left: unset;
     padding: 10px;
     border-bottom: 2px solid #f2f2f2;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
     align-items: center;
-    flex-shrink: 0;
 }
 
 .displayTasks__content {
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 0 auto;
-    text-align: justify;
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
-
+    text-align: justify;
 }
 
 .displayTasks__doneButton {
     min-width: 40px;
     min-height: 40px;
     padding: 10px;
-    margin: 5px;
+    /* margin: 5px; */
     color: white;
-    background-color: green;
+    background-color: hsl(120, 100%, 25%);
+    border: none;
+}
+
+.displayTasks__doneButton:hover {
+    background-color: hsl(120, 100%, 35%)
 }
 
 .displayTasks__removeButton {
     min-width: 40px;
     min-height: 40px;
     padding: 10px;
-    margin: 5px;
+    /* margin: 5px; */
     color: white;
-    background-color: red;
+    background-color: hsl(0, 100%, 40%);
+    border: none;
+}
+
+.displayTasks__removeButton:hover {
+    background-color: hsl(0, 100%, 50%);
 }
