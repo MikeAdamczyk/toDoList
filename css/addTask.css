@@ -14,10 +14,17 @@
 
 .addTask__button {
     padding: 10px;
-    background-color: teal;
+    background-color: hsl(180, 100%, 25%);
+    border: none;
     color: white;
     flex-grow: 1;
     margin: 10px;
+    transition: 0.5s;
+}
+
+.addTask__button:hover {
+    background-color: hsl(180, 100%, 35%);
+    transform: scale(1.1);
 }
 
 .addTask__input {
