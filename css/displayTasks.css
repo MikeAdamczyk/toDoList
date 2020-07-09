@@ -11,8 +11,10 @@
 
 .displayTasks__list {
     background-color: white;
-    padding: 5px;
+    padding: 0px;
+    margin: 0px;
     display: grid;
+    list-style: none;
 }
 
 .displayTasks__listItem {
@@ -24,6 +26,17 @@
     align-items: center;
 }
 
+.displayTasks__listItem--done {
+    padding: 10px;
+    border-bottom: 2px solid #f2f2f2;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+    text-decoration: line-through;
+    color: #ccc;
+}
+
 .displayTasks__content {
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -31,25 +44,34 @@
     text-align: justify;
 }
 
-.displayTasks__doneButton {
+.displayTasks__content--done {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.displayTasks__toggleDoneButton {
+    text-decoration: none;
     min-width: 40px;
     min-height: 40px;
     padding: 10px;
-    /* margin: 5px; */
     color: white;
     background-color: hsl(120, 100%, 25%);
     border: none;
+    ;
 }
 
-.displayTasks__doneButton:hover {
-    background-color: hsl(120, 100%, 35%)
+.displayTasks__toggleDoneButton:hover {
+    background-color: hsl(120, 100%, 35%);
+}
+
+.displayTasks__toggleDoneButton:active {
+    background-color: hsl(120, 100%, 45%);
 }
 
 .displayTasks__removeButton {
     min-width: 40px;
     min-height: 40px;
     padding: 10px;
-    /* margin: 5px; */
     color: white;
     background-color: hsl(0, 100%, 40%);
     border: none;
@@ -57,4 +79,8 @@
 
 .displayTasks__removeButton:hover {
     background-color: hsl(0, 100%, 50%);
+}
+
+.displayTasks__removeButton:active {
+    background-color: hsl(0, 100%, 70%);
 }

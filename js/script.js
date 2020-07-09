@@ -41,28 +41,24 @@
 
     const render = () => {
 
-        let htmlString = "";
+        const taskToHTML = (task) => {
+            `
+            <li class="displayTasks__listItem">
 
-        for (const task of tasks) {
-            htmlString += `
-            <li class="displayTasks__listItem" ${task.done ? "style=\"text-decoration: line-through; color: #ccc\"" : ""}
-            >
-
-            <div><button class="displayTasks__doneButton js-done">
+            <button class="displayTasks__toggleDoneButton js-done">
             ${task.done ? "✓" : ""}
-            </button></div>
-                        
-            <div class="displayTasks__content">${task.content}</div>
+            </button>
+                     
+            <span class="displayTasks__content ${task.done ? "displayTasks__content--done" : ""}">${task.content}</span>
             
-            <div><button class="displayTasks__removeButton js-remove">X</button></div>
+            <button class="displayTasks__removeButton js-remove">X</button>
             
             </li>`;
         };
 
-        document.querySelector(".js-list").innerHTML = htmlString;
+        document.querySelector(".js-list").innerHTML = tasks.map(taskToHTML).join("");
 
         bindEvents();
-
     };
 
     const onFormSubmit = (event) => {
