@@ -4,8 +4,7 @@
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
-        })
-
+        });
         render();
     };
 
@@ -41,8 +40,7 @@
 
     const render = () => {
 
-        const taskToHTML = (task) => {
-            `
+        const taskToHTML = (task) => `
             <li class="displayTasks__listItem">
 
             <button class="displayTasks__toggleDoneButton js-done">
@@ -54,7 +52,6 @@
             <button class="displayTasks__removeButton js-remove">X</button>
             
             </li>`;
-        };
 
         document.querySelector(".js-list").innerHTML = tasks.map(taskToHTML).join("");
 
