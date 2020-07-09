@@ -8,34 +8,31 @@
     align-content: center;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .displayTasks__header {
-        
-        grid-template-columns: 1fr;
-        align-content: center;
+        grid-template-columns: auto;
     }
-    
 }
 
-.displayTasks__controlButtons{
+.displayTasks__controlButtons {
     font-size: 15px;
     color: hsl(180, 100%, 25%);
     background: none;
-    border: none; 
+    border: none;
+    transition: 0.5s;
 }
 
-.displayTasks__controlButtons:hover{
-  cursor: pointer;
-  color: hsl(180, 100%, 35%);
-  text-decoration: underline;
+.displayTasks__controlButtons:hover {
+    cursor: pointer;
+    color: hsl(180, 100%, 35%);
+    text-decoration: underline;
 }
 
-.displayTasks__controlButtons:active{
+.displayTasks__controlButtons:active {
     cursor: pointer;
     color: hsl(180, 100%, 45%);
     text-decoration: underline;
-  }
-
+}
 
 .displayTasks__listBox {
     background-color: white;
@@ -90,7 +87,7 @@
     color: white;
     background-color: hsl(120, 100%, 25%);
     border: none;
-    ;
+    transition: 0.5s;
 }
 
 .displayTasks__toggleDoneButton:hover {
@@ -109,6 +106,7 @@
     color: white;
     background-color: hsl(0, 100%, 40%);
     border: none;
+    transition: 0.5s;
 }
 
 .displayTasks__removeButton:hover {
