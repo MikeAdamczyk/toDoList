@@ -2,7 +2,40 @@
     background-color: white;
     padding: 20px;
     margin-bottom: 3px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 20px;
+    align-content: center;
 }
+
+@media (max-width: 767px){
+    .displayTasks__header {
+        
+        grid-template-columns: 1fr;
+        align-content: center;
+    }
+    
+}
+
+.displayTasks__controlButtons{
+    font-size: 15px;
+    color: hsl(180, 100%, 25%);
+    background: none;
+    border: none; 
+}
+
+.displayTasks__controlButtons:hover{
+  cursor: pointer;
+  color: hsl(180, 100%, 35%);
+  text-decoration: underline;
+}
+
+.displayTasks__controlButtons:active{
+    cursor: pointer;
+    color: hsl(180, 100%, 45%);
+    text-decoration: underline;
+  }
+
 
 .displayTasks__listBox {
     background-color: white;
@@ -62,6 +95,7 @@
 
 .displayTasks__toggleDoneButton:hover {
     background-color: hsl(120, 100%, 35%);
+    cursor: pointer;
 }
 
 .displayTasks__toggleDoneButton:active {
@@ -79,6 +113,7 @@
 
 .displayTasks__removeButton:hover {
     background-color: hsl(0, 100%, 50%);
+    cursor: pointer;
 }
 
 .displayTasks__removeButton:active {

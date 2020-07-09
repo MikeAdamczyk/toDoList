@@ -35,6 +35,7 @@
 .addTask__button:hover {
     background-color: hsl(180, 100%, 35%);
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .addTask__button:active {
@@ -45,6 +46,7 @@
     .addTask__button:hover {
         background-color: hsl(180, 100%, 35%);
         transform: scaleY(1.1);
+        cursor: pointer;
     }
     .addTask__button:active {
         background-color: hsl(180, 100%, 45%);
