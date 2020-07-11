@@ -53,7 +53,6 @@
         render();
     };
 
-
     const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -76,7 +75,6 @@
             });
         });
     };
-
 
     const renderTasks = () => {
 
@@ -111,14 +109,14 @@
 
         buttonsElement.innerHTML = `
 
-        <button class="displayTasks__controlButtons js-toggleHideDoneTasks" ${tasks.every(({done}) => !done) ? "disabled" : ""}>
-        ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
-        </button>
+          <button class="displayTasks__controlButtons js-toggleHideDoneTasks" ${tasks.every(({done}) => !done) ? "disabled" : ""}>
+            ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+          </button>
 
-        <button class="displayTasks__controlButtons js-markAllDone"
-        ${tasks.every(({done}) => done) ? "disabled" : ""}
-        >Ukończ wszystkie
-        </button>
+          <button class="displayTasks__controlButtons js-markAllDone"
+          ${tasks.every(({done}) => done) ? "disabled" : ""}>
+            Ukończ wszystkie
+          </button>
         `;
     };
 
@@ -136,8 +134,6 @@
             toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks)
         };
     };
-
-
 
     const render = () => {
         renderTasks();
