@@ -3,9 +3,7 @@
     padding: 20px;
     margin-bottom: 3px;
     display: grid;
-    grid-template-columns: 1fr auto auto;
-    grid-gap: 20px;
-    align-content: center;
+    grid-template-columns: 1fr auto;
 }
 
 @media (max-width: 767px) {
@@ -14,24 +12,45 @@
     }
 }
 
+.displayTasks__buttonBox{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+    
+    .displayTasks__buttonBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
 .displayTasks__controlButtons {
     font-size: 15px;
     color: hsl(180, 100%, 25%);
     background: none;
     border: none;
+    margin-left: 20px;
     transition: 0.5s;
+    padding: 10px;
 }
 
 .displayTasks__controlButtons:hover {
     cursor: pointer;
     color: hsl(180, 100%, 35%);
-    text-decoration: underline;
 }
 
 .displayTasks__controlButtons:active {
     cursor: pointer;
     color: hsl(180, 100%, 45%);
-    text-decoration: underline;
+}
+
+.displayTasks__controlButtons:disabled {
+    cursor: pointer;
+    color: #ccc;
 }
 
 .displayTasks__listBox {
@@ -56,15 +75,8 @@
     align-items: center;
 }
 
-.displayTasks__listItem--done {
-    padding: 10px;
-    border-bottom: 2px solid #f2f2f2;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-gap: 10px;
-    align-items: center;
-    text-decoration: line-through;
-    color: #ccc;
+.displayTasks__listItem--hidden {
+    display: none;
 }
 
 .displayTasks__content {

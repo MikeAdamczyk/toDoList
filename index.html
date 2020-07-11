@@ -9,13 +9,14 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
     <link href="css/global.css" rel="stylesheet">
     <link href="css/container.css" rel="stylesheet">
     <link href="css/addTask.css" rel="stylesheet">
     <link href="css/displayTasks.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
 
     <script defer src="js/script.js"></script>
 
@@ -48,8 +49,7 @@
             <h2 class="displayTasks__header">
 
                 <span>Lista zadań</span>
-                <button class="displayTasks__controlButtons">Ukryj zakończone</button>
-                <button class="displayTasks__controlButtons">Zakończ wszystkie</button>
+                <span class="displayTasks__buttonBox js-buttons"></span>
 
             </h2>
 
@@ -63,7 +63,7 @@
 
 
         </section>
-
+        <footer class="footer">© Michał Adamczyk 2020. Wszystkie prawa zastrzeżone!</footer>
     </div>
 
 </body>
