@@ -1,9 +1,12 @@
 # Simple TODO List
-
+![icon check](/img/icon.png "TODO List logo")
 
 ## Demo
 [TODO List (GitHub Pages)](https://mikeadamczyk.github.io/toDoList/)
 
+## Description
+
+Simple TODO List helps you to **plan your day** and **work more efficiently**. It's light, simple and fast. Enjoy!
 
 ## Technology Stack
 - **HTML**
@@ -13,6 +16,5 @@
 ## Methodologies
 - **BEM**
 
-## Description
-
-Simple TODO List helps you to **plan your day** and **work more efficiently**. It's light, simple and fast. Enjoy!
+## Contact
+hello@codeman.it
