@@ -1,7 +1,7 @@
 # Simple TODO List
-![icon check](/img/icon.png "TODO List logo")
+![icon check](./img/icon.png "TODO List logo")
 
-![todo-demo](/img/todo-demo.gif)
+![todo-demo](./img/todo-demo.gif)
 
 ## Demo
 [TODO List (GitHub Pages)](https://mikeadamczyk.github.io/toDoList/)
